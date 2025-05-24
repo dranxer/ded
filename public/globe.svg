@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Globe Base -->
+  <circle cx="400" cy="400" r="350" stroke="currentColor" stroke-width="2" fill="none" opacity="0.1"/>
+  
+  <!-- Latitude Lines -->
+  <path d="M50,400 Q400,50 750,400" stroke="currentColor" stroke-width="1" fill="none" opacity="0.1"/>
+  <path d="M50,400 Q400,750 750,400" stroke="currentColor" stroke-width="1" fill="none" opacity="0.1"/>
+  <path d="M400,50 Q750,400 400,750" stroke="currentColor" stroke-width="1" fill="none" opacity="0.1"/>
+  <path d="M400,50 Q50,400 400,750" stroke="currentColor" stroke-width="1" fill="none" opacity="0.1"/>
+  
+  <!-- Longitude Lines -->
+  <path d="M400,50 L400,750" stroke="currentColor" stroke-width="1" fill="none" opacity="0.1"/>
+  <path d="M50,400 L750,400" stroke="currentColor" stroke-width="1" fill="none" opacity="0.1"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="400" cy="400" r="10" fill="currentColor" opacity="0.2"/>
+  <circle cx="400" cy="400" r="5" fill="currentColor" opacity="0.4"/>
+  
+  <!-- Connection Points -->
+  <circle cx="200" cy="300" r="3" fill="currentColor" opacity="0.3"/>
+  <circle cx="600" cy="300" r="3" fill="currentColor" opacity="0.3"/>
+  <circle cx="300" cy="500" r="3" fill="currentColor" opacity="0.3"/>
+  <circle cx="500" cy="500" r="3" fill="currentColor" opacity="0.3"/>
+  
+  <!-- Connection Lines -->
+  <path d="M200,300 L400,400" stroke="currentColor" stroke-width="1" fill="none" opacity="0.1"/>
+  <path d="M600,300 L400,400" stroke="currentColor" stroke-width="1" fill="none" opacity="0.1"/>
+  <path d="M300,500 L400,400" stroke="currentColor" stroke-width="1" fill="none" opacity="0.1"/>
+  <path d="M500,500 L400,400" stroke="currentColor" stroke-width="1" fill="none" opacity="0.1"/>
+</svg>

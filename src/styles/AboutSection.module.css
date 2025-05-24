@@ -1,0 +1,299 @@
+.aboutSection {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 100px 0 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* background: linear-gradient(135deg, #e0f2fe 0%, #fdf2f8 50%, #f0fdf4 100%); */
+}
+
+.backgroundSvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.aboutContent {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.glassCard {
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 41, 55, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 24px;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  padding: 2.5rem 2.2rem;
+  max-width: 370px;
+  min-width: 280px;
+  width: 100%;
+  color: #1e293b;
+  font-size: 1.15rem;
+  font-weight: 400;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  overflow: hidden;
+}
+
+.glassCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.08),
+    rgba(236, 72, 153, 0.08),
+    rgba(16, 185, 129, 0.08)
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.glassCard:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(31, 41, 55, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.glassCard:hover::before {
+  opacity: 1;
+}
+
+.glassCard h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.glassCard h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed, #db2777);
+  transition: width 0.5s ease;
+}
+
+.glassCard:hover h2::after {
+  width: 100%;
+}
+
+.glassCard .highlight {
+  color: #2563eb;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.glassCard .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #2563eb, #db2777);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+.glassCard:hover .highlight {
+  color: #db2777;
+}
+
+.glassCard:hover .highlight::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .cardsContainer {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .glassCard {
+    min-width: 220px;
+    max-width: 100%;
+    padding: 2rem 1.2rem;
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.9s var(--ease-out-expo) forwards;
+}
+
+.animatedBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #b3c6e7 0%, #e0eafc 100%);
+}
+
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.8;
+  filter: blur(1px);
+  animation: floatPlanet 14s ease-in-out infinite alternate;
+}
+
+.planet1 {
+  width: 180px;
+  height: 180px;
+  left: 5%;
+  top: 10%;
+  background: #a2b8e6;
+  animation-delay: 0s;
+}
+.planet2 {
+  width: 120px;
+  height: 120px;
+  left: 60%;
+  top: 5%;
+  background: #dbeafe;
+  animation-delay: 2s;
+}
+.planet3 {
+  width: 140px;
+  height: 140px;
+  left: 80%;
+  top: 65%;
+  background: #b6d0f7;
+  animation-delay: 4s;
+}
+.planet4 {
+  width: 90px;
+  height: 90px;
+  left: 25%;
+  top: 75%;
+  background: #e3eafe;
+  animation-delay: 1s;
+}
+.planet5 {
+  width: 70px;
+  height: 70px;
+  left: 45%;
+  top: 50%;
+  background: #c7d6f7;
+  animation-delay: 3s;
+}
+
+.ring {
+  position: absolute;
+  border: 2px solid #c7d6f7;
+  border-radius: 50%;
+  opacity: 0.5;
+  width: 180px;
+  height: 60px;
+  left: 4%;
+  top: 16%;
+  transform: rotate(-15deg);
+  animation: floatRing 12s ease-in-out infinite alternate;
+}
+.ring2 {
+  width: 120px;
+  height: 40px;
+  left: 62%;
+  top: 13%;
+  transform: rotate(20deg);
+  animation-delay: 2s;
+}
+
+.star {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 12px 3px #fff, 0 0 4px 2px #b3c6e7;
+  opacity: 0.8;
+  animation: twinkle 3s infinite alternate;
+}
+.star1 { left: 20%; top: 10%; animation-delay: 0s; }
+.star2 { left: 80%; top: 20%; animation-delay: 1s; }
+.star3 { left: 60%; top: 80%; animation-delay: 2s; }
+.star4 { left: 40%; top: 60%; animation-delay: 1.5s; }
+.star5 { left: 70%; top: 40%; animation-delay: 2.5s; }
+.star6 { left: 10%; top: 80%; animation-delay: 1.2s; }
+.star7 { left: 90%; top: 60%; animation-delay: 2.2s; }
+.star8 { left: 50%; top: 20%; animation-delay: 0.8s; }
+
+@keyframes floatPlanet {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-40px) scale(1.08); }
+}
+@keyframes floatRing {
+  0% { transform: rotate(-15deg) translateY(0); }
+  100% { transform: rotate(-15deg) translateY(-20px); }
+}
+@keyframes twinkle {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Ensure aboutContent is above background */
+.aboutContent { position: relative; z-index: 2; }
+
+/* Optionally hide the old SVG background */
+.backgroundSvg { display: none !important; } 
