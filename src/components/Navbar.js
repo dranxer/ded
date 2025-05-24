@@ -42,13 +42,15 @@ export default function Navbar({ activeSection, setActiveSection }) {
 
   return (
     <nav className="navbar">
-      <div className="mobile-menu-button" onClick={toggleMenu}>
-        <div className={`menu-icon ${menuOpen ? "open" : ""}`}>
-          <span></span>
-          <span></span>
-          <span></span>
+      {!menuOpen && (
+        <div className="mobile-menu-button" onClick={toggleMenu}>
+          <div className="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
-      </div>
+      )}
       <div className="navbar-center">
         <div className="logo">
           <div className="circular-logo">
@@ -63,7 +65,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
           <span>Think India</span>
         </div>
       </div>
-      <ul className="nav-links">
+      <ul className={`nav-links${menuOpen ? ' active' : ''}`}>
         <li>
           <Link href="/" className={activeSection === "home" ? "active" : ""}>Home</Link>
         </li>
@@ -115,7 +117,6 @@ export default function Navbar({ activeSection, setActiveSection }) {
           ) : (
             <span className="sidebar-title">Think India</span>
           )}
-          <button className="sidebar-close" onClick={closeMenu} aria-label="Close menu">&times;</button>
         </div>
         <ul className="sidebar-links">
           <li>

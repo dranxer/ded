@@ -291,11 +291,11 @@ export default function Home() {
           <div style={{ flex: '1 1 120px', minWidth: 120, marginBottom: 8, marginLeft: 'auto' }} className="footer-links">
             <h4 style={{ fontSize: '1rem', marginBottom: 8, fontWeight: 600 }}>Follow Us</h4>
             <div className="social-links" style={{ display: 'flex', gap: 8 }}>
-              <a href="https://www.youtube.com/@thinkindiaorg4152" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
-              <a href="https://www.facebook.com/ThinkIndiaOrg/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
-              <a href="https://www.linkedin.com/company/thinkindiaorg/?originalSubdomain=in" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-              <a href="https://x.com/thinkindiaorg?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
-              <a href="https://www.instagram.com/thinkindiaorg/?hl=en" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/tic-iitr/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/thinkindia_iitr/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
+              <a href="https://twitter.com/thinkindia" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
+              <a href="https://www.youtube.com/thinkindia" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
             </div>
           </div>
         </div>
