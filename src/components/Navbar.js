@@ -63,7 +63,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
           <span>Think India</span>
         </div>
       </div>
-      <ul className={`nav-links`}>
+      <ul className="nav-links">
         <li>
           <Link href="/" className={activeSection === "home" ? "active" : ""}>Home</Link>
         </li>
