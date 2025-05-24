@@ -303,4 +303,5 @@
 }
 
 /* Ensure main content is above background */
-.main, nav, .navbar { position: relative; z-index: 2; } 
+.main { position: relative; z-index: 2; }
+:global(nav), :global(.navbar) { position: relative; z-index: 2; } 
